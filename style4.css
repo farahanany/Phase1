@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+*{
+ 
+    font-family: 'Roboto', sans-serif;
+  
+    
+    }
+#title{
+
+    background-color:#C0DBEA;
+}
+#featured
+{
+ background-color: #C0DBEA;
+ text-align: center;
+ height:50%;
+
+}
+.carousel-item
+{
+    padding:7% 15%;
+}
+
+#contacts
+{
+   background-color: #C0DBEA; 
+}
+.pic
+{
+    width:5%;
+    border-radius: 100%;
+    margin:20px ;
+    
+}
+.card
+{
+    background-color: #C0DBEA;
+    
+}
+.card-group
+{
+    background-color: #C0DBEA;
+}
+.card-img-top
+{ 
+ margin-left: 100px;
+ width: 50%;
+   align-items: center;
+ padding: 2%;
+
+}
+*
+{
+    background-color: #C0DBEA;
+}
+
+.card-body
+{
+    background-color:#C0DBEA ;
+}
+.card-text
+{
+    background-color:#C9EEFF ;
+}
+.card-title
+{
+    background-color:#C9EEFF ;
+}

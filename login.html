@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <section id="title">
+
+        <nav class="navbar navbar-expand-lg  navbar-dark">
+          <a  class="navbar-brand "href="index.html" style="padding-left: 12px;">Lina Designs</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+           
+            <ul class="navbar-nav ms-auto">
+        
+              <li>
+                <a class="nav-link "href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="nav-link "href="login.html">Login</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Products
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#C0DBEA ;">
+                  <li><a class="dropdown-item" href="b_w.html"style="color:white;">B&W</a></li>
+                  <li><a class="dropdown-item" href="colored.html"style="color:white;">Colored</a></li>
+            
+                </ul>
+              </li>
+              <li class="nav-item cart">
+                <a class="nav-link "href="cart.html">
+                  <ion-icon name="basket"><i class="fa-solid fa-cart-shopping"></i></ion-icon>
+                  
+                  <span>0</span>
+                </a>
+    
+              </li>
+  
+              
+              
+            </ul>
+      
+          </div>
+      
+      </section>
+      
+      <div class="wrapper">
+        <h1>Aloha!</h1>
+        <p>Welcome back, you've <br> been missed!</p>
+        <form>
+          <input type="text" placeholder="Enter username" id="username">
+          <input type="password" placeholder="Password" id="password">
+          <p class="recover">
+            <a href="#">Recover Password</a>
+          </p>
+        <closeform></closeform></form>
+        <button id="check" class="submit" onclick="validate()">Sign in</button>
+       
+        <p class="or">
+            or continue with 
+        </p>
+    
+        <div class="not-member">
+          Not a member? <a href="signup.html">Register Now</a>
+        </div>
+      </div>
+
+
+      <script>
+       
+        function validate()
+        {
+          var regex=/^[a-z]{5,20}$/;
+          var regex2=/^[a-z0-9_-]{8,20}$/;
+
+          var usernameValue=document.getElementById('username').value;
+        var passValue=document.getElementById('password').value;
+          if(usernameValue==="" || passValue==="" )
+          {
+          document.getElementById("username").innerHTML;
+          document.getElementById("password").innerHTML;
+          alert("Please enter a username and a password!");
+            document.getElementByClassName("submit").disabled=true;
+          return false;
+             
+          }
+          else if(usernameValue.length<5 || usernameValue.length>20)
+          {
+            document.getElementById("username").innerHTML;
+            alert("Please enter username between 5 and 12 characters!");
+            document.getElementByClassName("submit").disabled=true;
+            return false;
+          }
+
+          else if(passValue.length<8 || passValue.length>20)
+          {
+            document.getElementById("password").innerHTML;
+            alert("Please enter password between 8 and 20 characters!");
+            document.getElementByClassName("submit").disabled=true;
+            return false;
+          }
+       else if(usernameValue.match(regex) || passValue.match(regex2)){
+         document.getElementById("username").innerHTML;
+         alert("Password or Username is wrong!");
+         document.getElementByClassName("submit").disabled=true;
+            return false;
+
+       }
+       else 
+       {
+       
+         alert("Login Successful!");
+         document.getElementByClassName("submit").disabled=true;
+            return false;
+       }
+         
+        
+      }
+        </script>
+    
+</body>
+</html>
